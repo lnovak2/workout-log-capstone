@@ -1,2 +1,11 @@
 language: node_js
 node_js: node
+services:
+- mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: oJMi3gm0LNdB/1V0kgse53yaSRgDgCZunTfLZBnZHwunWSJzUbsFnDNhXT/CxQp4RSrptN/IhhoFmcl2uUY3RfYkYxEkqn8h/SQFWTZyDSrMHX3h+vqhsF5+DniN+skUp58wLNVrLLMq7GK1NL2TPiE7mXvTk5VW68ykVM7uLQjV0czDyVCeQwvNZSmFNgEsWfSShrOtuGWHeJB9q782KWx1yx8WUZpwoVOs6oQpKkNSRk3WKV96shkx//LYxRIkdIe0vU5GBpLtWM4xfOxjPwTWBzghv5Apk2Duz/PMfJFAwFgw2T5LjRdrGE5TEQDjoFUi0gTGIkgbOd80nLO1peOgPH7JV/ZhM2DUiutNkTtgsbL8Emqi1bSE4U3qY40IZ0knehQ1GVuYVEmp2pqVZ/m4aIxZm8udMmOUqcpA8pd10w74vwEdroO8zxEzF0CZs4o/Ed0xmuvBZsHEzNB2ZeUxly5N7X7AVNWlPg+/ONaX/Z6VoR/Hok5Q75uacYtSUC1w34CO12jpFHNai0nrxElHsz5u/GeBXiI41FCXIzhsWLQMycqysY3ca9ZNDq+1sa8yW4SY0TPF52UEhv07X/peL9WtvjLRe5R0G9t9pu/F0yXaSind/Nq/DzJi44chP+6O/7/VCkY3dtYMQu4qDQHO75Dm5225lxKHtEW50N8=
+  app: peaceful-plateau-71283
+  on:
+    repo: lnovak2/workout-log-capstone
