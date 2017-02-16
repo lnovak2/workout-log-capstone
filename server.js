@@ -9,7 +9,11 @@ const app = express();
 app.use(morgan('common'));
 app.use(bodyParser.json());
 
+const workoutLogRouter = require('./workoutLogRouter');
+
 app.use(express.static('public'));
+
+app.use('/', workoutLogRouter);
 
 
 mongoose.Promise = global.Promise;
