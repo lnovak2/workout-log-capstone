@@ -1,0 +1,112 @@
+html body{
+	padding: 0;
+	margin: 0;
+	background-color: lightgrey;
+}
+
+nav{
+	background-color: lightgrey;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	top: 0;
+	left: 0;
+}
+
+nav h1{
+	position: relative;
+	bottom: 10px;
+}
+
+.nav-menu{
+	position: relative;
+	list-style: none;
+	text-align: right;
+	bottom: 55px;
+	font-size: 20px;
+}
+
+.nav-menu li{
+	display: inline-block;
+	padding-right: 15px;
+}
+
+.nav-menu li a{
+	text-decoration: none;
+	color: purple;
+}
+
+.nav-menu li a:hover{
+	color: black;
+}
+
+a:hover{
+	color: black;
+}
+
+main{
+	width: 100%;
+	margin-top: 50px;
+}
+
+main ul{
+	padding: 0;
+	margin: 0;
+}
+
+.original-list{
+	width: 100%;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+	list-style: none;
+	border: black solid 2px;
+}
+
+.workout-list{
+	width: 100%;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+	list-style: none;
+	border: black solid 2px;
+	border-top: 0px;
+}
+
+.workout-title{
+	font-family: tahoma, impact, sans-serif;
+	text-decoration: underline;
+	font-size: x-large;
+}
+
+.workout-list ol{
+	list-style: none;
+	margin-top: 10px;
+	padding-left: 0px;
+}
+
+.fa-plus-circle{
+	padding-left: 10px;
+}
+
+#message{
+	display: none;
+}
+
+#forms{
+	width: 50%;
+	margin: auto;
+}
+
+#workout-form form{
+	text-align: center;
+}
+
+
+.form-items{
+	font-family: tahoma, impact, sans-serif;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#sign-up-form{
+	display: none;
+}

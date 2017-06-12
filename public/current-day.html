@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>WorkoutTracker:Current-Day</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Workout Tracker">
+	<link rel="stylesheet" type="text/css" href="grid.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://use.fontawesome.com/36c8b42d30.js"></script>
 </head>
 <body>
-	<p>Hello World</p>
-	<script type="text/javascript" src="/mock-data.js"></script>
+	<nav>
+		<h1>WorkoutTracker</h1>
+		<ul class="nav-menu">
+			<li><a href="/index">Home</a></li>
+			<li><a href="/calendar">Calendar</a></li>
+			<li><a href="/current-day">Current Day</a></li>
+		</ul>
+	</nav>
+	<main>
+		<ul class="full-list">
+			<a href="/workout-form"><li class="original-list" id="add-workout">Add workout for today<i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></li></a>
+			
+		</ul>
+		<button type="button" id="log-out">Log Out</button>
+	</main>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>

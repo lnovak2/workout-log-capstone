@@ -4,20 +4,46 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
-router.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+function isAuthenticated(req, res, next) {
+	console.log(req.user);
+	console.log('hello');
+	if(req.user){
+		return next();
+	}
+	res.redirect('login');
+}
+
+router.get('/', isAuthenticated, (req, res) => {
+	console.log('root route');
+  res.redirect('current-day');
 });
 
-router.get('/workout-form', (req, res) => {
+router.get('/login', (req, res) => {
+  res.sendFile(__dirname + '/public/login-screen.html');
+});
+
+router.get('/logout', function (req, res){
+  req.session.destroy(function (err) {
+    res.redirect('login'); //Inside a callback… bulletproof!
+  });
+});
+
+router.get('/workout-form', isAuthenticated, (req, res) => {
   res.sendFile(__dirname + '/public/workout-form.html');
 });
 
-router.get('/current-day', (req, res) => {
+router.get('/exercise-form', isAuthenticated, (req, res) => {
+  res.sendFile(__dirname + '/public/exercise-form.html');
+});
+
+router.get('/current-day', isAuthenticated, (req, res) => {
+	console.log('Before current-day endpoint')
   res.sendFile(__dirname + '/public/current-day.html');
 });
 
 router.get('/calendar', (req, res) => {
   res.sendFile(__dirname + '/public/calendar.html');
 });
+
 
 module.exports = router;
