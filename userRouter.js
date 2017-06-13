@@ -51,41 +51,12 @@ passport.deserializeUser(function(id, cb){
   });
 });
 
-// const app = express();
-// app.use(morgan('common'));
-// app.use(bodyParser.json());
-// app.use(require('cookie-parser')());
-// //app.use(require('express-session'));
-// var store = new MongoDBStore(
-// {
-//   uri: DATABASE_URL,
-//     collection: 'workoutsDatabase'
-// });
-
-// store.on('error', function(error) {
-//       assert.ifError(error);
-//       assert.ok(false);
-//     });
-
-// app.use(require('express-session')({
-//     secret: 'secret',
-//     name: 'cookie-name',
-//     store: store, // connect-mongo session store
-//     proxy: true,
-//     resave: true,
-//     saveUninitialized: true
-// }));
-
-// User.create({
-// 	username: "Luke Novak", 
-// 	password: "Bears"
-// });
 
 router.post('/login', passport.authenticate('local'), function(req,res){
 	res.status(200).send({});
 })
 
-router.post('/user', (req, res) => {
+router.post('/user', (req, res, next) => {
 	console.log("This is:" + req.body);
   if (!req.body) {
     return res.status(400).json({message: 'No request body'});
@@ -141,11 +112,14 @@ router.post('/user', (req, res) => {
         })
     })
     .then(user => {
-      return res.status(201).json(user);
+      //return res.status(201).json(user);
+       return next();
     })
     .catch(err => {
       res.status(500).json({message: 'Internal server error'})
     });
+}, passport.authenticate('local'), function(req,res){
+  res.status(200).send({});
 });
 
 module.exports = router;

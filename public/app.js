@@ -123,15 +123,15 @@ $('#new-login').click(function(event){
 			password: $("#new-password").val()
 		}),
 		contentType: "application/json",
-		dataType: "json"
-	}).then(
-	function(data, status){
+		dataType: "json",
+		success: function(data, status){
 		if(status == 400){
 			$("#message").text("Did not create User");
 		}
 		window.location = "/current-day"
-	})
-})
+		}	
+	});
+});
 
 $('#log-out').click(function(event){
 	event.preventDefault();
