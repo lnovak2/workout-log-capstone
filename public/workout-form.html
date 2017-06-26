@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://use.fontawesome.com/36c8b42d30.js"></script>
 </head>
+
 <body id="forms">
-	<span id="message"></span>
-	<form>
-		<p class="form-items">Workout Name</p><input type="text" name="workoutname" id="workoutname">
-		<p class="form-items">Notes</p><textarea rows="4" cols="40" id = "notes"></textarea><br>
-		<input type="submit" value="Submit" id="workout-submit">
-	</form>
-	<button type="button" id="log-out">Log Out</button>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
+    <span id="message"></span>
+    <nav>
+        <h1>WorkoutTracker</h1>
+        <ul class="nav-menu">
+            <button type="button" id="log-out">Log Out <i class="fa fa-sign-out" aria-hidden="true"></i></button>
+        </ul>
+    </nav>
+    <form class="big-box">
+        <p class="form-items">Workout Name</p>
+        <input type="text" name="workoutname" id="workoutname" class="text-field">
+        </br>
+        <input type="submit" value="Submit" id="workout-submit" class="buttons">
+    </form>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>

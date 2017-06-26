@@ -5,44 +5,40 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 function isAuthenticated(req, res, next) {
-	console.log(req.user);
-	console.log('hello');
-	if(req.user){
-		return next();
-	}
-	res.redirect('login');
+    if (req.user) {
+        return next();
+    }
+    res.redirect('login');
 }
 
 router.get('/', isAuthenticated, (req, res) => {
-	console.log('root route');
-  res.redirect('current-day');
+    res.redirect('current-day');
 });
 
 router.get('/login', (req, res) => {
-  res.sendFile(__dirname + '/public/login-screen.html');
+    res.sendFile(__dirname + '/public/login-screen.html');
 });
 
-router.get('/logout', function (req, res){
-  req.session.destroy(function (err) {
-    res.redirect('login'); //Inside a callback… bulletproof!
-  });
+router.get('/logout', function(req, res) {
+    req.session.destroy(function(err) {
+        res.redirect('login'); //Inside a callback… bulletproof!
+    });
 });
 
 router.get('/workout-form', isAuthenticated, (req, res) => {
-  res.sendFile(__dirname + '/public/workout-form.html');
+    res.sendFile(__dirname + '/public/workout-form.html');
 });
 
 router.get('/exercise-form', isAuthenticated, (req, res) => {
-  res.sendFile(__dirname + '/public/exercise-form.html');
+    res.sendFile(__dirname + '/public/exercise-form.html');
 });
 
 router.get('/current-day', isAuthenticated, (req, res) => {
-	console.log('Before current-day endpoint')
-  res.sendFile(__dirname + '/public/current-day.html');
+    res.sendFile(__dirname + '/public/current-day.html');
 });
 
 router.get('/calendar', (req, res) => {
-  res.sendFile(__dirname + '/public/calendar.html');
+    res.sendFile(__dirname + '/public/calendar.html');
 });
 
 

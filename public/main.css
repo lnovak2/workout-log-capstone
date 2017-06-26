@@ -1,112 +1,205 @@
-html body{
-	padding: 0;
-	margin: 0;
-	background-color: lightgrey;
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-image: url("images/dumbbells.jpg");
+    background-size: cover;
 }
 
-nav{
-	background-color: lightgrey;
-	position: fixed;
-	width: 100%;
-	height: 50px;
-	top: 0;
-	left: 0;
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
 }
 
-nav h1{
-	position: relative;
-	bottom: 10px;
+nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
 }
 
-.nav-menu{
-	position: relative;
-	list-style: none;
-	text-align: right;
-	bottom: 55px;
-	font-size: 20px;
+nav h1 {
+    position: relative;
+    bottom: 10px;
 }
 
-.nav-menu li{
-	display: inline-block;
-	padding-right: 15px;
+.nav-menu {
+    position: relative;
+    list-style: none;
+    text-align: right;
+    bottom: 55px;
+    font-size: 20px;
 }
 
-.nav-menu li a{
-	text-decoration: none;
-	color: purple;
+.nav-menu li {
+    display: inline-block;
+    padding-right: 15px;
 }
 
-.nav-menu li a:hover{
-	color: black;
+.nav-menu li a {
+    text-decoration: none;
+    color: purple;
 }
 
-a:hover{
-	color: black;
+.nav-menu li a:hover {
+    color: black;
 }
 
-main{
-	width: 100%;
-	margin-top: 50px;
+a {
+    text-decoration: none;
 }
 
-main ul{
-	padding: 0;
-	margin: 0;
+a:hover {
+    color: black;
 }
 
-.original-list{
-	width: 100%;
-	text-align: center;
-	padding: 20px 0px 20px 0px;
-	list-style: none;
-	border: black solid 2px;
+main {
+    width: 100%;
+    margin-top: 50px;
 }
 
-.workout-list{
-	width: 100%;
-	text-align: center;
-	padding: 20px 0px 20px 0px;
-	list-style: none;
-	border: black solid 2px;
-	border-top: 0px;
+main ul {
+    padding: 0;
+    margin: 0;
 }
 
-.workout-title{
-	font-family: tahoma, impact, sans-serif;
-	text-decoration: underline;
-	font-size: x-large;
+.original-list {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    list-style: none;
+    color: white;
 }
 
-.workout-list ol{
-	list-style: none;
-	margin-top: 10px;
-	padding-left: 0px;
+#add-workout {
+    margin: auto;
+    vertical-align: middle;
+    width: 255px;
+    font-size: 20px;
+    border: black 2px solid;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 20px;
+    padding: 0px 0px 0px 5px;
+    font-weight: normal;
 }
 
-.fa-plus-circle{
-	padding-left: 10px;
+#span {
+    position: relative;
+    top: -8px;
 }
 
-#message{
-	display: none;
+.workout-list {
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+    list-style: none;
+    border: black solid 2px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .4);
+    margin-bottom: 10px;
 }
 
-#forms{
-	width: 50%;
-	margin: auto;
+.workout-title {
+    text-decoration: underline;
+    font-size: x-large;
 }
 
-#workout-form form{
-	text-align: center;
+.workout-list ol {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0px;
 }
 
-
-.form-items{
-	font-family: tahoma, impact, sans-serif;
-	margin-top: 10px;
-	margin-bottom: 10px;
+.fa-plus-circle {
+    padding-left: 10px;
 }
 
-#sign-up-form{
-	display: none;
+#message {
+    display: none;
+}
+
+#forms {
+    width: 50%;
+    margin: auto;
+}
+
+#workout-form form {
+    text-align: center;
+}
+
+#notes {
+    border-radius: 5px;
+}
+
+.form-items {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+#sign-up-form {
+    display: none;
+}
+
+.big-box {
+    border: black solid 2px;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    padding-top: 80px;
+    margin-top: 120px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+#new-button {}
+
+#login-button {
+    margin-left: 30px;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    color: white;
+    padding: 5px 10px;
+    background-color: #36486b;
+    border-color: #36486b;
+}
+
+.buttons:hover {
+    cursor: pointer;
+}
+
+.text-field {
+    border-radius: 5px;
+    width: 303px;
+    height: 20px;
+    margin: 0 auto;
+    border: none;
+    border: solid 1px rgb(169, 169, 169);
+}
+
+#exercise-entry {
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+#log-out {
+    background-color: rgba(0, 0, 0, .4);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px;
+}
+
+#log-out:hover {
+    cursor: pointer;
 }

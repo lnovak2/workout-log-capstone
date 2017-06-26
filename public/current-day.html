@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>WorkoutTracker:Current-Day</title>
-	<meta charset="utf-8">
-	<meta name="description" content="Workout Tracker">
-	<link rel="stylesheet" type="text/css" href="grid.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<script src="https://use.fontawesome.com/36c8b42d30.js"></script>
+    <title>WorkoutTracker:Current-Day</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Workout Tracker">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://use.fontawesome.com/36c8b42d30.js"></script>
 </head>
+
 <body>
-	<nav>
-		<h1>WorkoutTracker</h1>
-		<ul class="nav-menu">
-			<li><a href="/index">Home</a></li>
-			<li><a href="/calendar">Calendar</a></li>
-			<li><a href="/current-day">Current Day</a></li>
-		</ul>
-	</nav>
-	<main>
-		<ul class="full-list">
-			<a href="/workout-form"><li class="original-list" id="add-workout">Add workout for today<i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></li></a>
-			
-		</ul>
-		<button type="button" id="log-out">Log Out</button>
-	</main>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
+    <span id="message"></span>
+    <nav>
+        <h1>WorkoutTracker</h1>
+        <ul class="nav-menu">
+            <button type="button" id="log-out">Log Out <i class="fa fa-sign-out" aria-hidden="true"></i></button>
+        </ul>
+    </nav>
+    <main>
+        <ul class="full-list">
+            <a href="/workout-form">
+                <li class="original-list" id="add-workout"><span id="span">Add workout for today</span><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                </li>
+            </a>
+        </ul>
+    </main>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>
