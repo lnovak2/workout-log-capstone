@@ -11,6 +11,7 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const workoutLogRouter = require('./workoutLogRouter');
 const apiRouter = require('./apiRouter');
 const userRouter = require('./userRouter');
+var assert = require('assert');
 
 const app = express();
 app.use(morgan('common'));
