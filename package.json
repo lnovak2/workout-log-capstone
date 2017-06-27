@@ -2,6 +2,9 @@
   "name": "workout-log-capstone",
   "version": "1.0.0",
   "description": "Node capstone - Workout log",
+  "engines": {
+    "node": "7.4.0"
+  },
   "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.4.0",
